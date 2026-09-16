@@ -1,0 +1,12 @@
+{
+  "name": "neetnexa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NeetNexa NEET preparation platform",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
