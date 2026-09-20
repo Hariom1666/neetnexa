@@ -14,72 +14,32 @@ export default function Layout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header
-          style={{
-            background: "#fff",
-            borderBottom: "1px solid #e6eaf0",
-          }}
-        >
-          <div
-            className="container"
-            style={{
-              height: 70,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
+      <body className="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+        <header className="border-b border-gray-800 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link
               href="/"
-              style={{
-                fontSize: 23,
-                fontWeight: 900,
-                color: "#176bff",
-              }}
+              className="text-xl font-extrabold text-blue-500 tracking-wide"
             >
               Neet Nexa
             </Link>
 
-            <nav
-              style={{
-                display: "flex",
-                gap: 18,
-                alignItems: "center",
-              }}
-            >
-              <Link href="/tests">Tests</Link>
-              <Link href="/dashboard">Dashboard</Link>
-              <Link href="/login" className="btn btn-primary">
+            <nav className="flex gap-6 items-center text-sm font-medium">
+              <Link href="/tests" className="hover:text-blue-400 transition">Tests</Link>
+              <Link href="/dashboard" className="hover:text-blue-400 transition">Dashboard</Link>
+              <Link href="/login" className="px-4 py-2 bg-blue-600 rounded-lg text-white hover:bg-blue-500 transition">
                 Login
               </Link>
             </nav>
           </div>
         </header>
 
-        {children}
+        <main className="flex-grow">{children}</main>
 
-        <footer
-          style={{
-            marginTop: 60,
-            padding: "28px 0",
-            borderTop: "1px solid #e6eaf0",
-            background: "#fff",
-          }}
-        >
-          <div
-            className="container"
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              gap: 20,
-              flexWrap: "wrap",
-            }}
-          >
+        <footer className="mt-auto py-6 border-t border-gray-800 bg-gray-900 text-xs text-gray-400">
+          <div className="max-w-7xl mx-auto px-6 flex justify-between gap-4 flex-wrap">
             <span>© {new Date().getFullYear()} Neet Nexa</span>
-            <span>
-              Built for focused NEET preparation • Hariom Singh
-            </span>
+            <span>Built for focused NEET preparation • Hariom Singh</span>
           </div>
         </footer>
       </body>
